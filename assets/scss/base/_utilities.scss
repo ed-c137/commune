@@ -1,0 +1,268 @@
+.u-center-text { text-align: center !important; }
+
+.u-margin-bottom-small { margin-bottom: 1.5rem !important; }
+.u-margin-bottom-medium {
+    margin-bottom: 4rem !important;
+
+    @include respond(tab-port) {
+        margin-bottom: 3rem !important;
+    }
+}
+
+.u-margin-bottom-big { 
+    margin-bottom: 8rem !important;
+
+    @include respond(tab-port) {
+        margin-bottom: 5rem !important;
+    }
+}
+
+.u-margin-top-big { margin-top: 8rem !important; }
+.u-margin-top-huge { margin-top: 10rem !important; }
+
+//generate utility colors from dark to light 
+// $color: rgb(141, 3, 3);
+// $color-name: 'grey';
+
+
+$allcolors: (
+    "orange":    orange,
+    "green":   green,
+);
+@each $color-name, $color in $allcolors {
+    @for $i from 10 through 100 {
+        @if $i % 10 == 0 {
+          $percentage: $i*1%;
+          @if $i < 50{
+            $k : 50 - $i;//change the first value to lighten the whites i.e between 50 to 80
+            $kper : $k * 1%;
+            .#{$color-name}-#{$i} {
+                 background-color: mix(white, $color, $kper);
+            } 
+        } @else if $i == 50{
+            .#{$color-name}-#{$i} {
+                background-color: $color;
+            }
+        }@else if $i > 50{
+          $b : $i - 35;//change the second value to darken the blacks i.e between 20 to 50
+          $bper : $b * 1%;
+            .#{$color-name}-#{$i} {
+              background-color: mix(black, $color, $bper);
+            }
+    
+            }
+        }
+      }
+}
+
+//Generate text colors
+// @each $color-name, $color in $allcolors {
+//     @for $i from 10 through 100 {
+//         @if $i % 10 == 0 {
+//           $percentage: $i*1%;
+//           @if $i < 50{
+//             $k : 50 - $i;//change the first value to lighten the whites i.e between 50 to 80
+//             $kper : $k * 1%;
+//             .#{$color-name}-text-#{$i} {
+//                  color: mix(white, $color, $kper);
+//             } 
+//         } @else if $i == 50{
+//             .#{$color-name}-text-#{$i} {
+//                 color: $color;
+//             }
+//         }@else if $i > 50{
+//           $b : $i - 35;//change the second value to darken the blacks i.e between 20 to 50
+//           $bper : $b * 1%;
+//             .#{$color-name}-text-#{$i} {
+//               color: mix(black, $color, $bper);
+//             }
+    
+//             }
+//         }
+//       }
+// }
+
+
+ .container{
+    // padding: 0 20px;
+ }
+
+ .d-grid{
+    display: grid !important;
+ }
+
+ .d-flex{
+    display: flex !important;
+ }
+
+ .d-inline-b{
+    display: inline-block;
+ }
+ .d-block{
+    display: block;
+ }
+ .d-float-right{
+    float: right;
+ }
+
+ .d-float-left{
+     float:left;
+    }
+    
+.clearfix{
+    &::after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+}
+
+// .d-block{
+//     display: block !important;
+// }
+
+// .d-none{
+//     display: none !important;
+// }
+// @include media-breakpoint-only(xs){
+//     .d-sm-block {
+//         display: block !important;
+//     }
+//     .d-sm-none { 
+//         display: none !important;
+//     }
+//  }
+
+//  @include media-breakpoint-only(sm){
+//     .d-md-block {
+//         display: block !important;
+//     }
+//     .d-md-none{
+//         display: none !important;
+//     }
+//  }
+
+//  @include media-breakpoint-only(md){
+//     .d-lg-block {
+//         display: block !important;
+//     }
+//     .d-lg-none{
+//         display: none !important;
+//     }
+//  }
+
+//  @include media-breakpoint-only(lg){
+//     .d-xl-block {
+//         display: block !important;
+//     }
+//     .d-xl-none{
+//         display: none !important;
+//     }
+//  }
+
+//  @include media-breakpoint-up(xl){
+//     .d-xxl-block {
+//         display: block !important;
+//     }
+//     .d-xxl-none{
+//         display: none !important;
+//     }
+//  }
+ 
+ .pad-item-l1{
+    >*:not(:first-child){
+        padding-left: 5px;
+    }
+ }
+ .pad-item-l2{
+    >*:not(:first-child){
+        padding-left: 10px;
+    }
+ }
+ .pad-item-r1{
+    >*:not(:last-child){
+        padding-right: 5px;
+    }
+ }
+ .pad-item-r2{
+    >*:not(:last-child){
+        padding-right: 10px;
+    }
+ }
+
+ .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .img-fit-cover{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .text-center{
+      text-align: center;
+    }
+    .text-right{
+        text-align: right;
+    }
+    .text-left{
+      text-align: left;
+    }
+////////////////////===========WEBSITE CUSTOM=================////////////////////
+ .bg-primary{
+    background-color: cornflowerblue;
+ }
+
+.shadow-xs	{
+    box-shadow: var(--shadow-xs);
+}
+.shadow-sm{
+    box-shadow: var(--shadow-sm);
+}	
+.shadow-md{
+    box-shadow: var(--shadow-md);
+}	
+.shadow-lg{
+    box-shadow: var(--shadow-lg);
+}
+.shadow-xl{
+    box-shadow: var(--shadow-xl);
+}	
+.shadow-none{
+    box-shadow: none;
+}	
+
+.btn{
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1.2;
+  @include fontSmooth;
+  transition: all 0.2s ease;
+//   will-change: transform;
+
+  &:focus {
+    box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.15);
+    outline: none;
+  }
+
+}
+
+.bg-yellow{
+    background-color: #fde68a;
+}
+.bg-blue{
+    background-color: #a5f3fc;
+}
+
+.border-one{
+    border: 1px solid #0e7490;
+}
+
+.border-two{
+    border: 1px solid #86198f;
+}
+
+
+

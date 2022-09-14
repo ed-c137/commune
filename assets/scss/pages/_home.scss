@@ -1,0 +1,85 @@
+///////===========Layout===============//////////@at-root
+.navbar{
+    justify-content: space-between;
+    // .navbar__logo img{
+    //     height: 36px;
+    // }
+}
+header.main{
+    padding-top: 30px;
+
+}
+.navbar__nav-list{
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    padding-right: 10px;
+}
+
+.navbar__nav-menu{
+    background: v(app-background);
+    border: none;
+}
+
+article{
+    margin-bottom: 3rem;
+}
+
+main{
+    margin-top: 50px;
+}
+
+.hero-capsule{
+    background-color: $color-primary;
+    color: $input-text-light;
+    padding: 8px 36px 8px 24px;
+    border-radius: 60px;
+    margin-bottom: 24px;
+    a{
+        color: $input-text-light;
+        text-decoration: underline;
+    }
+}
+
+.input-waitlist{
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #E3E3E3;
+    border-radius: 5px;
+    padding: 18px 24px;
+    box-sizing: border-box;
+    &::placeholder{
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: #B6B6B6;
+    }
+    @include media-breakpoint-up(sm){
+        width: auto;
+        margin-right: 15px;
+    }
+}
+
+.btn-waitlist{
+    padding: 18px 24px;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    width: 100%;
+    background-color: $color-primary;
+    color: white;
+    border-radius: 5px;
+    @include media-breakpoint-up(sm){
+        width: auto;
+    }
+}
+
+.companies{
+    padding: 10px 0 ;
+    flex-wrap: wrap;
+}

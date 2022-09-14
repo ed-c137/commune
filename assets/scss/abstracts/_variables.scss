@@ -1,0 +1,161 @@
+// My defined colors
+$blue:    #0d6efd;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #d63384;
+$red:     #dc3545;
+$orange:  #fd7e14;
+$yellow:  #ffc107;
+$green:   #198754;
+$teal:    #20c997;
+$cyan:    #0dcaf0;
+
+
+$color-black: #000;
+
+$color-primary: hsla(255, 43%, 28%, 1);
+$color-secondary: hsl(45, 91%, 62%);
+$color-tertiary: hsla(0, 0%, 0%, 1);
+
+$color-quaternary: #5643fa;
+
+$color-primary-light: #7ed56f;
+$color-primary-lighter: #b2f2b2;
+$color-primary-dark: #28b485;
+$color-secondary-darker: #ffb900;
+
+$background-primary: #55c57a;
+$background-secondary: #ffb900;
+$background-tertiary: #2998ff;
+$background-quaternary: #5643fa;
+
+// $border-primary: #55c57a;
+// $border-secondary: #ffb900;
+
+// $color-light-text: #7ed56f;
+// $color-light-text-muted: #b2f2b2;
+// $color-secondary-text: #ffb900;
+// $color-secondary-text-muted: #ffb900;
+
+$app-background: #F6F9FE;
+$content-background: #fff;
+$input-background: #fff;
+$input-text: #000;
+$input-border: #ccc;
+$input-text-light: hsla(258, 43%, 83%, 1);
+
+$menu-text: rgb(197, 197, 197);
+$menu-background: #fff;
+$menu-background-hover: #f5f5f5;
+$menu-text-hover: #000;
+$menu-background-active: #ececec;
+
+$link-text: #007bff;//can be a primary or secondary color
+$slection-color: #000;
+$desc-text: #000;
+$subsection-text: #000;
+$header-color: #333;
+$footer-color: #333;
+$menu-color: #fff;
+$text-loud: #000;
+$text-muted: hsla(222, 5%, 46%, 1);
+
+
+$stroke-muted: hsla(0, 0%, 85%, 1);
+
+//=====Dark Mode===== //
+$app-background-dark: #000;
+$content-background-dark: #000;
+$input-text-dark: #e8eaed;
+$input-background-dark:#303134;
+$input-border-dark: #3c4043;
+$menu-text-dark: #969ba1;
+$subsection-text-dark:#e8eaed;
+$desc-text-dark:#bdc1c6;
+$text-muted-dark: #ADADAD;
+
+$white: #fff;
+$grey-50:#fafafa;
+$grey-100:#f5f5f5;
+$grey-200: #eeeeee;
+$grey-300: #e0e0e0;
+$grey-400: #bdbdbd;
+$grey-500: #9e9e9e;
+$grey-600: #757575;
+$grey-700: #616161;
+$grey-800: #424242;
+$grey-900: #212121;
+$black: #000;
+
+$error: #c62828;
+$warning: #ffc107;
+$info: #17a2b8;
+$success: #28a745;
+
+
+// FONT
+$default-font-size: 1.6rem;
+
+
+// GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;
+
+//Other
+$site-header-height: 3rem;
+//=============>>>>>> COLOR ASSIGNMENTS <<<<<<=============//
+
+$allcolors: (
+    "orange":    orange,
+    "green":   green,
+);
+body{
+    --grey-50: #{$grey-50};
+    --grey-100: #{$grey-100};
+    --grey-200: #{$grey-200};
+    --grey-300: #{$grey-300};
+    --grey-400: #{$grey-400};
+    --grey-500: #{$grey-500};
+    --grey-600: #{$grey-600};
+    --grey-700: #{$grey-700};
+    --grey-800: #{$grey-800};
+    --grey-900: #{$grey-900};
+    --error:#{$error};
+    --warning:#{$warning};
+    --info:#{$info};
+    --success:#{$success};
+    --app-background: #{$app-background};
+    --content-background: #{$content-background};
+    --input-background: #{$input-background};
+    --input-text: #{$input-text};
+    --input-border: #{$input-border};
+    --menu-text: #{$menu-text};
+    --link-text: #{$link-text};
+    --slection-color: #{$slection-color};
+    --subsection-text: #{$subsection-text};
+    --desc-text: #{$desc-text};
+    // @include gencolors($allcolors);
+    --shadow-xs:  0 0.1px 0.3px rgba(0, 0, 0, 0.06),
+                0 1px 2px rgba(0, 0, 0, 0.12);
+    --shadow-sm:  0 0.3px 0.4px rgba(0, 0, 0, 0.025),
+                    0 0.9px 1.5px rgba(0, 0, 0, 0.05), 
+                    0 3.5px 6px rgba(0, 0, 0, 0.1);
+    --shadow-md:  0 0.9px 1.5px rgba(0, 0, 0, 0.03), 
+                    0 3.1px 5.5px rgba(0, 0, 0, 0.08), 
+                    0 14px 25px rgba(0, 0, 0, 0.12);
+    --shadow-lg:  0 1.2px 1.9px -1px rgba(0, 0, 0, 0.014), 
+                    0 3.3px 5.3px -1px rgba(0, 0, 0, 0.038), 
+                    0 8.5px 12.7px -1px rgba(0, 0, 0, 0.085), 
+                    0 30px 42px -1px rgba(0, 0, 0, 0.15);
+    --shadow-xl:  0 1.5px 2.1px -6px rgba(0, 0, 0, 0.012), 
+                    0 3.6px 5.2px -6px rgba(0, 0, 0, 0.035), 
+                    0 7.3px 10.6px -6px rgba(0, 0, 0, 0.07), 
+                    0 16.2px 21.9px -6px rgba(0, 0, 0, 0.117), 
+                    0 46px 60px -6px rgba(0, 0, 0, 0.2);
+}
+
+body.dark{
+
+}

@@ -108,6 +108,7 @@ body {
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 100%;
     background: v(app-background);
+    font-family: 'Nunito Sans';
     header{
         // background: deeppink;
     }
@@ -126,4 +127,5 @@ body {
     background: v(app-background);
     border-radius: 10px;
     padding: 0 20px;
+    min-height: calc(100vh - 40px);
 }

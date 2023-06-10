@@ -9,6 +9,12 @@ header.main{
     padding-top: 30px;
 
 }
+.navbar__nav{
+    flex-direction: column-reverse;
+    @include media-breakpoint-up(lg){
+        flex-direction: row;
+    }
+}
 .navbar__nav-list{
     font-family: 'Nunito Sans';
     font-style: normal;
@@ -16,11 +22,34 @@ header.main{
     font-size: 18px;
     line-height: 25px;
     padding-right: 10px;
+    flex-direction: column;
+    position: absolute;
+    max-height: 0px;
+    background: darken($app-background, 1%);
+    left: 0;
+    width: 100%;
+    top: 100%;
+    overflow: hidden;
+    transition: all .2s linear;
+    .navbar__nav-item{
+        padding: .9rem 1.4rem;
+    }
+    @include media-breakpoint-up(lg){
+        position: relative;
+        max-height: 1000px;
+        flex-direction: row;
+        background: $app-background;
+    }
+}
+
+.navbar__nav-list--open{
+    max-height: 1000px;
 }
 
 .navbar__nav-menu{
     background: v(app-background);
     border: none;
+    cursor: pointer;
 }
 
 article{
@@ -29,6 +58,9 @@ article{
 
 main{
     margin-top: 50px;
+    p{
+        color: #636363;
+    }
 }
 
 .hero-capsule{
@@ -37,49 +69,88 @@ main{
     padding: 8px 36px 8px 24px;
     border-radius: 60px;
     margin-bottom: 24px;
+    display: inline-block;
     a{
         color: $input-text-light;
         text-decoration: underline;
+        font-weight: 600;
     }
 }
-
-.input-waitlist{
-    width: 100%;
-    background: #FFFFFF;
-    border: 1px solid #E3E3E3;
-    border-radius: 5px;
-    padding: 18px 24px;
-    box-sizing: border-box;
-    &::placeholder{
+.waitlist-wrap{
+    flex-direction: column;
+    .input-waitlist{
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid #E3E3E3;
+        border-radius: 5px;
+        padding: 18px 24px;
+        box-sizing: border-box;
+        margin-bottom: 1rem;
+        &::placeholder{
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+            color: #B6B6B6;
+        }
+        @include media-breakpoint-up(sm){
+            width: auto;
+            margin-right: 15px;
+        }
+    }
+    
+    .btn-waitlist{
+        padding: 18px 24px;
         font-family: 'Nunito Sans';
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
-        line-height: 25px;
-        color: #B6B6B6;
+        width: 100%;
+        background-color: $color-primary;
+        color: white;
+        border-radius: 5px;
+        @include media-breakpoint-up(sm){
+            width: auto;
+        }
     }
-    @include media-breakpoint-up(sm){
-        width: auto;
-        margin-right: 15px;
-    }
-}
+    @include media-breakpoint-up(md){
+        flex-direction: row;
+        .input-waitlist{
+            flex: 1;
+            margin-bottom: 0rem;
+        }
+        .btn-waitlist{
 
-.btn-waitlist{
-    padding: 18px 24px;
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    width: 100%;
-    background-color: $color-primary;
-    color: white;
-    border-radius: 5px;
-    @include media-breakpoint-up(sm){
-        width: auto;
+        }
     }
 }
 
 .companies{
-    padding: 10px 0 ;
+    padding: 10px 0;
     flex-wrap: wrap;
+    >li{
+        width: 3.5rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        img{
+            max-width: 100%;
+        }
+    }
+}
+
+.m-lg-none{
+    @include media-breakpoint-up(lg){
+        margin: 0 !important;
+    }
+}
+
+.btn-join-waitlist{
+    padding: 1rem 1.3rem;
+    background: $color-primary;
+    color: white;
+    font-weight: 800;
+    width: fit-content;
+    border-radius: 5px;
+    white-space: nowrap;
 }
